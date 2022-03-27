@@ -1,4 +1,5 @@
 import kivy
+import webbrowser
 kivy.require('2.1.0') # replace with your current kivy version !
 
 from kivy.app import App
@@ -10,7 +11,7 @@ Builder.load_file('MainLayout.kv')
 
 class MainLayout(FloatLayout):
     def redirect_to_eve(self):
-        pass
+        webbrowser.open_new('https://login.eveonline.com/v2/oauth/authorize/')
 
 class MobileTTool(App):
     def build(self):
